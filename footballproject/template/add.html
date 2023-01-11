@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% block body %}
+
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <input type="text" name="team_name" placeholder="Enter team name">
+   <input type="text" name="coach_name" placeholder="Enter coach name">
+   <input type="text" name="desc" placeholder="Enter team description ">
+   <input type="text" name="year" placeholder="Enter year">
+   <input type="file" name="img" >
+   <input type="submit">
+
+</form>
+
+{% endblock %}

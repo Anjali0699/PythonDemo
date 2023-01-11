@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{team.img.url}}" width="300" height="300">
+        </div>
+
+        <div class="col-md-6">
+            <h4><b><i>{{team.team_name}}</i></b></h4><br>
+            <h5>{{team.coach_name}}</h5><br>
+            <h5>{{team.desc}} {{team.year}}</h5><br>
+
+            <a class="btn btn-warning" href="{% url 'footballapp:update' team.id %}">Update</a>
+            <a class="btn btn-danger" href="{% url 'footballapp:delete' team.id %}">Delete</a>
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
